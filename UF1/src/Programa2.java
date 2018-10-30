@@ -1,7 +1,7 @@
-import java.io.*;
-public class Programa1{
+import java.io.File;
+public class Programa2{
 	public static void main (String[] args) {
-		String dir = "/home/dgonzalo/Baixades"; // directorio actual
+		String dir = args[0]; // directorio actual
 		File f = new File(dir);
 		String[] archivos = f.list();
 		System.out.printf("Ficheros en el directorio actual: %d %n", archivos.length);
