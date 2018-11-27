@@ -1,3 +1,4 @@
+package Flujos_Streams;
 import java.io.*;
 public class EscribirFicheroTexto {
 	public static void main (String [] args) throws IOException {

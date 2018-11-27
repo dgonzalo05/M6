@@ -1,3 +1,4 @@
+package Flujos_Streams;
 import java.io.*;
 public class EscribirFicheroTextoBuf2 {
 	public static void main (String [] args) {
