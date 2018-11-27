@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Albums>
+	<album>
+		<autor>Dani</autor>
+		<titulo>BUPBUP</titulo>
+		<formato>MP3</formato>
+	</album>
+	<album>
+		<autor>muse</autor>
+		<titulo>Simulation Theory</titulo>
+		<formato>MP3</formato>
+	</album>
+</Albums>
