@@ -1,0 +1,19 @@
+<doc>
+	<elem nr="1">
+		<hola>1</hola>
+		<adeu>2</adeu>
+	</elem>
+	<elem nr="2">
+		<hola>2</hola>
+		<adeu>3</adeu>
+	</elem>
+	<elem nr="3">
+		<hola>3</hola>
+	</elem>
+	<elem nr="4">
+		<hola>4</hola>
+		<adeu>5</adeu>
+		<altre>6</altre>
+		<altre>7</altre>
+	</elem>
+</doc>
