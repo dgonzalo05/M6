@@ -1,5 +1,0 @@
-<doc>
-	<elem nr="1">
-		<hola>2</hola>		<hola>3</hola>		<hola>4</hola>
-	</elem>
-</doc>
