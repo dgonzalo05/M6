@@ -1,7 +1,9 @@
-import primero.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
+import primero.*;
+
 import java.util.Date;
 
 public class Main {
@@ -16,7 +18,7 @@ public class Main {
 		// Depart dep = new Depart();
 		Date fecha = new Date();;
 		Emple emp = new Emple();
-		emp.setEmpNo((byte) 7727);
+		emp.setEmpNo(7727);
 		emp.setDepart(new Depart(10));
 		emp.setApellido("GONZALO");
 		emp.setOficio("PROGRAMADOR");
