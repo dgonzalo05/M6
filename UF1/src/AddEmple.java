@@ -6,7 +6,7 @@ import primero.*;
 
 import java.util.Date;
 
-public class Main {
+public class AddEmple {
 	public static void main(String[] args) {
 		//En primer lugar se obtiene la sesión creada por el Singleton.
 		SessionFactory sesion = HibernateUtil.getSessionFactory();
@@ -16,7 +16,7 @@ public class Main {
 		System.out.println("Inserto una fila en emple");
 		//Creamos un nuevo objeto Depart y damos valor a sus atributos
 		// Depart dep = new Depart();
-		Date fecha = new Date();;
+		Date fecha = new Date();
 		Emple emp = new Emple();
 		emp.setEmpNo(7727);
 		emp.setDepart(new Depart(10));
