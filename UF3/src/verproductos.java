@@ -1,11 +1,18 @@
-import javax.xml.xquery.*;
+//import javax.xml.xquery.;
+import javax.xml.xquery.XQConnection;
+import javax.xml.xquery.XQDataSource;
+import javax.xml.xquery.XQException;
+import javax.xml.xquery.XQPreparedExpression;
+import javax.xml.xquery.XQResultSequence;
+
 import net.xqj.exist.ExistXQDataSource;
 
-public class VerProductos {
+
+public class verproductos {
 	public static void main(String[] args) {
 		try {
 			XQDataSource server = new ExistXQDataSource();
-			server.setProperty("serverName", "localhost");
+			server.setProperty("serverName", "192.168.56.102");
 			server.setProperty("port", "8080");
 			server.setProperty("user", "admin");
 			server.setProperty("password", "austria");
