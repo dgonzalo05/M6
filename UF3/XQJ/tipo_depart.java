@@ -1,11 +1,8 @@
-package ll;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 import javax.xml.namespace.QName;
-//import javax.xml.xquery.;
 import javax.xml.xquery.XQConnection;
 import javax.xml.xquery.XQDataSource;
 import javax.xml.xquery.XQException;

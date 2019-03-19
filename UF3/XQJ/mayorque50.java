@@ -1,5 +1,3 @@
-package ll;
-//import javax.xml.xquery.;
 import javax.xml.xquery.XQConnection;
 import javax.xml.xquery.XQDataSource;
 import javax.xml.xquery.XQException;
