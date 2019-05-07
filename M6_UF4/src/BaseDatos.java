@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
@@ -10,10 +11,10 @@ import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 import org.neodatis.odb.impl.core.query.values.ValuesCriteriaQuery;
 public class BaseDatos {
 
-	private ODB odb;
+	public static ODB odb;
 	
 	public BaseDatos() {
-		this.odb = ODBFactory.open("Producto_Ped.DB");
+		this.odb = ODBFactory.open("Tienda.DB");
 	}
 	public  Objects<Producto> getProductos() {
 		return odb.getObjects(Producto.class);
@@ -37,14 +38,18 @@ public class BaseDatos {
 		Values val = odb.getValues(new ValuesCriteriaQuery(Pedido.class).max("numeroPedido"));
 		return ((BigDecimal)val.next().getByAlias("numeroPedido")).intValue();
 	}
+	public int getMaxIdVenta() {
+		Values val = odb.getValues(new ValuesCriteriaQuery(Venta.class).max("numeroVenta"));
+		return ((BigDecimal)val.next().getByAlias("numeroVenta")).intValue();
+	}
 	public void insertarProducto(Producto producto) {
 		odb.store(producto);
 	}
-	public void insertarPedido(Pedido pedido) {
-		odb.store(pedido);
-	}
 	public void insertarVenta(Venta venta) {
 		odb.store(venta);
+	}
+	public void insertarPedido(Pedido pedido) {
+		odb.store(pedido);
 	}
 	public void cerrarBD() {
 		this.odb.close();

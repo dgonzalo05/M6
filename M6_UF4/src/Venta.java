@@ -8,18 +8,21 @@ public class Venta implements Serializable, PropertyChangeListener {
     private Date fechaVenta;
     private int cantidad;
     private String observaciones;
-    public Venta() { }
-    public Venta (int numeroVenta, Producto Idproducto, Date fechaVenta, int cantitad, String observaciones) {
+    public Venta() {
+    }
+    public Venta (int numeroVenta, Producto Idproducto, Date fechaVenta,int cantidad, String observaciones) {
             this.numeroVenta = numeroVenta;
             this.Idproducto = Idproducto ;
             this.fechaVenta = fechaVenta;
-            this.cantidad = cantitad;
+            this.cantidad = cantidad;
             this.observaciones = observaciones;
     }
    
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-    	
+    	System.out.println("Pendiente de pedido por falta de stock");
+    	this.setObservaciones("Pendiente de pedido por falta de stock");
+    	BaseDatos.odb.store(this);
      }
 	public int getNumeroVenta() {
 		return numeroVenta;

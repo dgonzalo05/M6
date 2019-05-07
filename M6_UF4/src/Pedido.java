@@ -12,6 +12,9 @@ public class Pedido implements Serializable, PropertyChangeListener {
     private Date fecha;
     private int cantidad;
     private BaseDatos db;
+    public Pedido() {
+    	
+    }
     public Pedido(Producto producto, BaseDatos db) {
     	this.producto = producto;
         this.db = db;
@@ -28,9 +31,10 @@ public class Pedido implements Serializable, PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
     	int max = db.getMaxIdPedido() + 1;
     	java.util.Date fecha_actual = new Date();
-    	int nueva_cantidad = (int) evt.getNewValue() - (int) evt.getOldValue();
+    	int nueva_cantidad = (int) evt.getNewValue();
     	Pedido p1 = new Pedido(max, this.producto,fecha_actual, nueva_cantidad);
     	db.insertarPedido(p1);
+    	System.out.println("Nuevo pedido en la base de datos");
     	
      }
 	public int getNumeroPedido() {

@@ -24,6 +24,7 @@ public class Producto implements Serializable {
 		this. stockactual = stockactual;
 		this.stockminimo = stockminimo;
 		this.pvp = pvp;
+		
 	}
 	
 	public void addPropertyChangeListener (PropertyChangeListener listener) {
@@ -57,11 +58,10 @@ public class Producto implements Serializable {
 	public void setStockactual(int valorNuevo) {
 		int valorAnterior = this.stockactual;
 		this.stockactual = valorNuevo;
-		
 		if (this.stockactual < getStockminimo()) // hay que realizar pedido
 		{
 			propertySupport.firePropertyChange("stockactual", valorAnterior, this.stockactual);
-			this.stockactual = valorNuevo; // dejamos el stock anterior, no actualizamos
+			this.stockactual = valorAnterior; // dejamos el stock anterior, no actualizamos
 		}
 	}
 
